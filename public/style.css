@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "NotingYou";
+    src: url("./assets/fonts/NothingYouCouldDo.ttf");
+  }
+
+
+  .palette{
+     font-family: "NotingYou";
+  }

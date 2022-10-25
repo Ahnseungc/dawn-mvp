@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "언더비",
+      "short_detail": "흰색 레터링...",
+      "image": "/src/assets/clothes/ex_clothes1.png"
+    },
+    {
+      "id": 2,
+      "name": "LIPHOP",
+      "short_detail": "힙한 검정옷",
+      "image": "/src/assets/clothes/ex_clothes2.png"
+    },
+    {
+      "id": 3,
+      "name": "위드윤",
+      "short_detail": "땡떙이 패턴",
+      "image": "/src/assets/clothes/ex_clothes3.png"
+    },
+    {
+      "id": 4,
+      "name": "스파오",
+      "short_detail": "레터링 반팔티",
+      "image": "/src/assets/clothes/ex_clothes4.png"
+    },
+    {
+      "id": 5,
+      "name": "앤더슨벨",
+      "short_detail": "깔끔한 반팔티 ",
+      "image": "/src/assets/clothes/ex_clothes5.png"
+    },
+    {
+      "id": 6,
+      "name": "드로우핏",
+      "short_detail": "무지 반팔티",
+      "image": "/src/assets/clothes/ex_clothes6.png"
+    }
+  ]
+}
