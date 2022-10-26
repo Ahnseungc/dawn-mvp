@@ -17,32 +17,32 @@ const MainMenu = () => {
     {
       id: 2,
       src: "/assets/clothes/ex2.png",
-      text: "언더비",
-      detail: "흰색 레터링...",
+      text: "LIPHOP",
+      detail: "힙한 검정옷",
     },
     {
       id: 3,
       src: "assets/clothes/ex3.png",
-      text: "언더비",
-      detail: "흰색 레터링...",
+      text: "위드윤",
+      detail: "땡땡이 패턴",
     },
     {
       id: 4,
       src: "assets/clothes/ex4.png",
-      text: "언더비",
-      detail: "흰색 레터링...",
+      text: "스파오",
+      detail: "래터링 반팔티",
     },
     {
       id: 5,
       src: "assets/clothes/ex5.png",
-      text: "언더비",
-      detail: "흰색 레터링...",
+      text: "앤더슨벨",
+      detail: "깔끔한 반팔티",
     },
     {
       id: 6,
       src: "assets/clothes/ex6.png",
-      text: "언더비",
-      detail: "흰색 레터링...",
+      text: "드로우핏",
+      detail: "무지 반팔티",
     },
   ]);
 

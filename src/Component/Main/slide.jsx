@@ -6,6 +6,9 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  border-bottom: 2px solid #b0b0b0;
+  border-right: 2px solid #b0b0b0;
+  border-left: 2px solid #b0b0b0;
   & > ul {
     display: flex;
     margin: 0 auto;
@@ -16,6 +19,16 @@ const Container = styled.div`
   & > ul li {
     padding-top: 24px;
     justify-content: center;
+  }
+  & > ul li .products_header {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 500;
+  }
+  & > ul li > div .products_detail {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
   }
 `;
 const Slide = ({ count, slideList, slideRef, handleSlider }) => {
@@ -28,6 +41,8 @@ const Slide = ({ count, slideList, slideRef, handleSlider }) => {
           return (
             <li key={slide.id}>
               <img src={slide.src} />
+              <div className="products_header">{slide.text}</div>
+              <div className="products_detail">{slide.detail}</div>
             </li>
           );
         })}
