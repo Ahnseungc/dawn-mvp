@@ -4,6 +4,7 @@ import MainMenu from "./Component/Main/MainMenu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import styled from "styled-components";
+import Fotter from "./Component/Fotter";
 const Main = styled.main`
   width: 100%;
   max-width: 1200px;
@@ -17,6 +18,7 @@ function App() {
       <Main>
         <MainMenu />
       </Main>
+      <Fotter />
     </>
   );
 }
