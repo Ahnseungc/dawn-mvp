@@ -33,12 +33,12 @@ const Container = styled.div`
 const MainMenu = () => {
   const [slidePx, setSlidePx] = useState(0);
 
-  const toPrev = () => {
-    if (slidePx < 0) setSlidePx(slidePx + 990);
+  const toNext = () => {
+    if (slidePx < 0) setSlidePx(slidePx + 300);
     console.log(slidePx);
   };
-  const toNext = () => {
-    if (slidePx > -1980) setSlidePx(slidePx - 990);
+  const toPrev = () => {
+    if (slidePx > -1980) setSlidePx(slidePx - 300);
     console.log(slidePx);
   };
   return (

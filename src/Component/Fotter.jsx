@@ -7,6 +7,7 @@ const Container = styled.div`
   background: #ebebeb;
   margin: 0 auto;
   margin-top: 108px;
+
   & h1 {
     font-weight: 700;
     font-size: 30px;
@@ -14,7 +15,6 @@ const Container = styled.div`
     letter-spacing: 0.1em;
     font-family: "noto";
     color: #707070;
-    /* margin: 37px 139.5px 0 0; */
     padding: 37px 0 0 139.5px;
   }
   & .info {
@@ -31,6 +31,7 @@ const Container = styled.div`
   }
   & .right {
     width: 50%;
+    margin-left: 150px;
   }
   & .right .SNS {
     display: flex;

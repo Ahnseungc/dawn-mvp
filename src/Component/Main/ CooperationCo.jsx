@@ -14,14 +14,15 @@ const Container = styled.div`
   }
   & ul {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     margin-top: 50px;
   }
   & ul li {
+    justify-content: center;
     display: flex;
-    flex: auto;
+
     margin-right: 144px;
   }
   & ul li .detail {
@@ -92,8 +93,6 @@ const CooperationCo = () => {
       </div>
     </li>
   ));
-
-  console.log(CompanyList);
 
   return (
     <Container>
