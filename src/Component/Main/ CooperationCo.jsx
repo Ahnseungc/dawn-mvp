@@ -14,15 +14,14 @@ const Container = styled.div`
   }
   & ul {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
     flex-wrap: wrap;
     margin-top: 50px;
   }
   & ul li {
-    justify-content: center;
     display: flex;
-
+    justify-content: center;
     margin-right: 144px;
   }
   & ul li .detail {

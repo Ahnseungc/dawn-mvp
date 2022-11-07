@@ -6,7 +6,7 @@ const AvbartMesh = () => {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  const gltf = useLoader(GLTFLoader, "/assets/3D/model.gltf");
+  const gltf = useLoader(GLTFLoader, "/assets/3D/boot.gltf");
 
   useFrame((state, delta, frame) => {
     const mesh = gltf.scene.children[0];
@@ -17,7 +17,7 @@ const AvbartMesh = () => {
     <>
       <primitive
         object={gltf.scene}
-        scale={0.6}
+        scale={10}
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)}
         onClick={(e) => {

@@ -60,22 +60,25 @@ const slideList = [
     detail: "흰색 레터링...",
   },
 ];
-const Slide = ({ slide }) => {
-  const SlideList = slideList.map((el, index) => {
-    console.log(el.id);
+const Slide = ({ slide, onClickItem }) => {
+  const SlideList = slideList.map((obj, index) => {
+    // console.log(el.id);
     return (
       <li
         key={index}
         className="Item"
-        id={el.id}
+        id={obj.id}
         style={{
           transform: `translateX(${slide}px)`,
           transition: "0.5s ease",
         }}
+        onClick={() => {
+          onClickItem(obj);
+        }}
       >
-        <img src={el.src}></img>
-        <div className="products_header">{el.text}</div>
-        <div className="products_detail">{el.detail}</div>
+        <img src={obj.src}></img>
+        <div className="products_header">{obj.text}</div>
+        <div className="products_detail">{obj.detail}</div>
       </li>
     );
   });

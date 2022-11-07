@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  max-width: 1441px;
+  max-width: 1440px;
   width: 100%;
   background: #ebebeb;
   margin: 0 auto;
@@ -18,6 +18,7 @@ const Container = styled.div`
     padding: 37px 0 0 139.5px;
   }
   & .info {
+    width: 50%;
     padding: 15px 0 41px 139.5px;
     font-weight: 400;
     font-size: 15px;
@@ -31,7 +32,7 @@ const Container = styled.div`
   }
   & .right {
     width: 50%;
-    margin-left: 150px;
+    margin-left: 5%;
   }
   & .right .SNS {
     display: flex;
