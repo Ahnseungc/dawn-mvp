@@ -2,8 +2,44 @@ import React from "react";
 import RadioGroup from "./Avbart_plus_sex/Avbart_plus_sex_radiogroup";
 import Radio from "./Avbart_plus_sex/Avbart_plus_sex_radio";
 import Modal from "react-modal";
+import tall_select from "./Avbart_plus_sex/Avbart_plus_tall_select";
 import styled from "styled-components";
 
+
+const OPTIONS = [
+  {
+    value: 150,
+    name: "150 ~ 154cm",
+  },
+  {
+    value: 155,
+    name: "155 ~ 159cm",
+  },
+  {
+    value: 160,
+    name: "160 ~ 164cm",
+  },
+  {
+    value: 165,
+    name: "165 ~ 169cm",
+  },
+  {
+    value: 170,
+    name: "170 ~ 174cm",
+  },
+  {
+    value: 175,
+    name: "175 ~ 179cm",
+  },
+  {
+    value: 180,
+    name: "180 ~ 184cm",
+  },
+  {
+    value: 185,
+    name: "185 ~ 189cm",
+  },
+];
 const custom = {
   content: {
     width: "350px",
@@ -49,16 +85,7 @@ const Avbart_plus = ({ isOpen }) => {
         </div>
         <div className="tall">
           <h3>키</h3>
-          <select name="tall">
-            <option value={150}>150 ~ 154cm</option>
-            <option value={150}>155 ~ 159cm</option>
-            <option value={150}>160 ~ 164cm</option>
-            <option value={150}>165 ~ 169cm</option>
-            <option value={150}>170 ~ 174cm</option>
-            <option value={150}>175 ~ 179cm</option>
-            <option value={150}>180 ~ 184cm</option>
-            <option value={150}>185 ~ 189cm</option>
-          </select>
+          <tall_select option={OPTIONS} />
         </div>
         <div className="weight">
           <h3>체중</h3>

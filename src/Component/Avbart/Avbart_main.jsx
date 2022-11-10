@@ -57,7 +57,7 @@ const Avbart_main = ({ item }) => {
           <ambientLight />
           <directionalLight />
           <Suspense fallback={null}>
-            <AvbartMesh position={[0, 0, -10]} />
+            <AvbartMesh position={[10, 0, -10]} />
           </Suspense>
           <OrbitControls target={[0, -1, 0]} enableDamping={true} />
         </Canvas>
