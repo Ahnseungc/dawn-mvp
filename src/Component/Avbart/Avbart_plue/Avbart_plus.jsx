@@ -5,7 +5,6 @@ import Modal from "react-modal";
 import tall_select from "./Avbart_plus_sex/Avbart_plus_tall_select";
 import styled from "styled-components";
 
-
 const OPTIONS = [
   {
     value: 150,
@@ -53,9 +52,12 @@ const custom = {
   },
 };
 const Avbart_plus = ({ isOpen }) => {
+  // isOpen
   Modal.setAppElement("#root");
 
-  const closeModal = () => {
+  // const [modal, setModal] = useState(false);
+
+  const closeModal = ({ isOpen }) => {
     isOpen.closeModal();
   };
 
@@ -85,11 +87,15 @@ const Avbart_plus = ({ isOpen }) => {
         </div>
         <div className="tall">
           <h3>키</h3>
-          <tall_select option={OPTIONS} />
+          <tall_select option="OPTIONS" />
         </div>
         <div className="weight">
           <h3>체중</h3>
         </div>
+
+        <button className="create_btn" onClick={closeModal}>
+          아바타 생성하기
+        </button>
       </Modal>
     </>
   );

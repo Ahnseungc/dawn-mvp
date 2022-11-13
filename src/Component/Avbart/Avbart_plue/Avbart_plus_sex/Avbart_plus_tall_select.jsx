@@ -10,18 +10,18 @@ const Select = styled.select`
   border-radius: 3px;
 `;
 
-const tall_select = (props) => {
+const tall_select = (options) => {
   const handleChange = (e) => {
     console.log(e.target.value);
   };
-
+  console.log(options);
   return (
     <Select onChange={handleChange}>
-      {props.options.map((option) => {
+      {options.options.map((option) => {
         <option
           key={option.value}
           value={option.value}
-          defaultValue={props.defaultValue === option.value}
+          defaultValue={options.defaultValue === option.value}
         >
           {option.name}
         </option>;

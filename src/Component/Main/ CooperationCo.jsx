@@ -15,6 +15,7 @@ const Container = styled.div`
   & ul {
     display: flex;
     /* justify-content: center; */
+    justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
     margin-top: 50px;
