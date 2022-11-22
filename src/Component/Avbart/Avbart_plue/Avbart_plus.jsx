@@ -112,7 +112,9 @@ const Avbart_plus = ({ setModalOpen }) => {
         <Weight_select />
       </div>
       <div className="create_btn">
-        <button id="create_btn">아바타 생성하기</button>
+        <button id="create_btn" onClick={closeModal}>
+          아바타 생성하기
+        </button>
       </div>
     </Container>
   );
