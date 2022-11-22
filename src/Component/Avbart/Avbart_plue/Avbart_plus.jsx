@@ -1,103 +1,120 @@
-import React from "react";
+import { React, useState } from "react";
 import RadioGroup from "./Avbart_plus_sex/Avbart_plus_sex_radiogroup";
 import Radio from "./Avbart_plus_sex/Avbart_plus_sex_radio";
-import Modal from "react-modal";
-import tall_select from "./Avbart_plus_sex/Avbart_plus_tall_select";
+import Weight_select from "./Avbart_plus_sex/Avbart_weight";
+import Tall_select from "./Avbart_plus_sex/Avbart_plus_tall_select";
 import styled from "styled-components";
+import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
-const OPTIONS = [
-  {
-    value: 150,
-    name: "150 ~ 154cm",
-  },
-  {
-    value: 155,
-    name: "155 ~ 159cm",
-  },
-  {
-    value: 160,
-    name: "160 ~ 164cm",
-  },
-  {
-    value: 165,
-    name: "165 ~ 169cm",
-  },
-  {
-    value: 170,
-    name: "170 ~ 174cm",
-  },
-  {
-    value: 175,
-    name: "175 ~ 179cm",
-  },
-  {
-    value: 180,
-    name: "180 ~ 184cm",
-  },
-  {
-    value: 185,
-    name: "185 ~ 189cm",
-  },
-];
-const custom = {
-  content: {
-    width: "350px",
-    height: "550px",
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-const Avbart_plus = ({ isOpen }) => {
-  // isOpen
-  Modal.setAppElement("#root");
+const Container = styled.div`
+  & h1 {
+    height: 29px;
+    width: 97px;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+    margin: 35px 0 50px 25px;
+  }
+  width: 350px;
+  height: 550px;
+  z-index: 999;
+  /* 최상단 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
 
-  // const [modal, setModal] = useState(false);
+  & #modalCloseBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 43.46px 33.46px 0 0;
+  }
+  & h3 {
+    margin-left: 25px;
+    margin-bottom: 15px;
+  }
+  & .sex .radiogroup {
+    margin-bottom: 25px;
+    margin-left: 25px;
+  }
+  & .sex .radiogroup label {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  & .sex .radiogroup .man {
+    margin-right: 69px;
+  }
 
-  const closeModal = ({ isOpen }) => {
-    isOpen.closeModal();
+  & .tall {
+    margin-bottom: 25px;
+  }
+  & .weight {
+    margin-bottom: 60px;
+  }
+  & button {
+    background: #8e71d5;
+    border-radius: 3px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  & .create_btn {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+const Avbart_plus = ({ setModalOpen }) => {
+  const closeModal = () => {
+    setModalOpen(false);
   };
-
   return (
-    <>
-      <Modal isOpen={isOpen} style={custom}>
-        <div className="Avbart_plus_header">
-          <h1>아바타 생성</h1>
-          <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-            <button id="modalCloseBtn" onClick={closeModal}>
-              X
-            </button>
+    <Container>
+      <div className="Avbart_plus_header">
+        <h1>아바타 생성</h1>
+        <div className="modalBody" onClick={(e) => e.stopPropagation()}>
+          <div id="modalCloseBtn">
+            <img
+              src="/assets/Icon/close_icon.png"
+              alt="/"
+              onClick={closeModal}
+            />
           </div>
         </div>
-        <div className="sex">
-          <h3>성별</h3>
-          <form>
-            <RadioGroup>
-              <Radio name="" value="" defaultChecked>
-                남자
-              </Radio>
-              <Radio name="" value="">
-                여자
-              </Radio>
-            </RadioGroup>
-          </form>
+      </div>
+      <div className="sex">
+        <h3>성별</h3>
+        <div className="radiogroup">
+          <Radio name="" value="" defaultChecked></Radio>
+          <label className="man">남자</label>
+          <Radio name="" value=""></Radio>
+          <label>여자</label>
         </div>
-        <div className="tall">
-          <h3>키</h3>
-          <tall_select option="OPTIONS" />
-        </div>
-        <div className="weight">
-          <h3>체중</h3>
-        </div>
-
-        <button className="create_btn" onClick={closeModal}>
-          아바타 생성하기
-        </button>
-      </Modal>
-    </>
+      </div>
+      <div className="tall">
+        <h3>키</h3>
+        <Tall_select />
+      </div>
+      <div className="weight">
+        <h3>체중</h3>
+        <Weight_select />
+      </div>
+      <div className="create_btn">
+        <button id="create_btn">아바타 생성하기</button>
+      </div>
+    </Container>
   );
 };
 

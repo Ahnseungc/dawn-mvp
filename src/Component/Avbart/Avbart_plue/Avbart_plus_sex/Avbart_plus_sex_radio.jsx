@@ -8,7 +8,8 @@ const Avbart_plus_sex = ({
   children,
 }) => {
   return (
-    <label>
+    <>
+      <label>{children}</label>
       <input
         type="radio"
         value={value}
@@ -16,8 +17,7 @@ const Avbart_plus_sex = ({
         defaultChecked={defaultChecked}
         disabled={disabled}
       />
-      {children}
-    </label>
+    </>
   );
 };
 export default Avbart_plus_sex;

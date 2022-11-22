@@ -19,7 +19,7 @@ const AvbartMesh = () => {
     <>
       <primitive
         object={gltf.scene}
-        scale={10}
+        scale={8}
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)}
         onClick={(e) => {}}

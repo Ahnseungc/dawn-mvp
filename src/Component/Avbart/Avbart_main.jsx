@@ -4,9 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import AvbartMesh from "./Avbart_Mesh";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Modal from "react-modal";
 import Avbart_plus from "./Avbart_plue/Avbart_plus";
 import { OrbitControls } from "@react-three/drei";
+import Avbart_qa from "./Avbart_qa";
 
 const Container = styled.div`
   & .plus {
@@ -31,9 +31,16 @@ const Avbart_main = ({ item }) => {
     }
     // 그게 아니라 이미 입고 있을 때
   }, [item]);
-  const [isOpen, setOpen] = useState(false);
+
+  const [modalopen, setModalOpen] = useState(false);
+  const [qamodalopen, setqamodalOpen] = useState(false);
+
   const handleClick = () => {
-    setOpen(true);
+    setModalOpen(true);
+    console.log("popup", modalopen);
+  };
+  const qahandleClick = () => {
+    setqamodalOpen(true);
   };
   return (
     <Container>
@@ -45,11 +52,15 @@ const Avbart_main = ({ item }) => {
               alt="/"
               onClick={handleClick}
             />
-
-            <Avbart_plus isOpen={isOpen} />
+            {modalopen && <Avbart_plus setModalOpen={setModalOpen} />}
           </div>
           <div className="help">
-            <img src="/assets/Icon/help_icon.png" alt="/" />
+            <img
+              src="/assets/Icon/help_icon.png"
+              alt="/"
+              onClick={qahandleClick}
+            />
+            {qamodalopen && <Avbart_qa setqamodalOpen={qahandleClick} />}
           </div>
         </div>
 

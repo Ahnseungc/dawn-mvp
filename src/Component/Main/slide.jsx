@@ -62,7 +62,7 @@ const slideList = [
 ];
 const Slide = ({ slide, onClickItem }) => {
   const SlideList = slideList.map((obj, index) => {
-    // console.log(el.id);
+    
     return (
       <li
         key={index}
