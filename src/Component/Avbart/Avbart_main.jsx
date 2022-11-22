@@ -20,6 +20,13 @@ const Container = styled.div`
     width: 100%;
     justify-content: flex-end;
   }
+  & .Avbart3D {
+    width: 100%;
+    height: 500px;
+    display: flex;
+
+    margin-top: 50px;
+  }
 `;
 
 const Avbart_main = ({ item }) => {
@@ -63,15 +70,27 @@ const Avbart_main = ({ item }) => {
             {qamodalopen && <Avbart_qa setqamodalOpen={qahandleClick} />}
           </div>
         </div>
-
-        <Canvas>
-          <ambientLight />
-          <directionalLight />
-          <Suspense fallback={null}>
-            <AvbartMesh position={[10, 0, -10]} />
-          </Suspense>
-          <OrbitControls target={[0, -1, 0]} enableDamping={true} />
-        </Canvas>
+        <div className="Avbart3D">
+          <Canvas
+            orthographic
+            camera={{
+              left: -1,
+              right: 1,
+              top: 1,
+              bottom: -1,
+              near: 0.1,
+              far: 1000,
+              zoom: 18,
+            }}
+          >
+            <ambientLight />
+            <directionalLight />
+            <Suspense fallback={null}>
+              <AvbartMesh position={[10, 0, -10]} />
+            </Suspense>
+            <OrbitControls target={[0, -1, 0]} enableDamping={true} />
+          </Canvas>
+        </div>
       </div>
     </Container>
   );

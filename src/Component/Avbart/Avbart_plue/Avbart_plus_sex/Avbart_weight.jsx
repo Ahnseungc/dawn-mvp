@@ -51,7 +51,6 @@ const OPTIONS = [
 const Select = styled.select`
   margin: 0;
   padding: 0;
-  /* display: flex; */
   width: 300px;
   height: 40px;
   border: 1px solid #b0b0b0;

@@ -7,6 +7,12 @@ import styled from "styled-components";
 import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8b89893c;
+
   & h1 {
     height: 29px;
     width: 97px;
@@ -18,16 +24,18 @@ const Container = styled.div`
     text-align: left;
     margin: 35px 0 50px 25px;
   }
-  width: 350px;
-  height: 550px;
-  z-index: 999;
-  /* 최상단 */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-
+  & .modal_all {
+    width: 350px;
+    height: 550px;
+    z-index: 999;
+    /* 최상단 */
+    /* position: absolute; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
   & #modalCloseBtn {
     position: absolute;
     right: 0;
@@ -82,39 +90,41 @@ const Avbart_plus = ({ setModalOpen }) => {
   };
   return (
     <Container>
-      <div className="Avbart_plus_header">
-        <h1>아바타 생성</h1>
-        <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-          <div id="modalCloseBtn">
-            <img
-              src="/assets/Icon/close_icon.png"
-              alt="/"
-              onClick={closeModal}
-            />
+      <div className="modal_all">
+        <div className="Avbart_plus_header">
+          <h1>아바타 생성</h1>
+          <div className="modalBody" onClick={(e) => e.stopPropagation()}>
+            <div id="modalCloseBtn">
+              <img
+                src="/assets/Icon/close_icon.png"
+                alt="/"
+                onClick={closeModal}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="sex">
-        <h3>성별</h3>
-        <div className="radiogroup">
-          <Radio name="" value="" defaultChecked></Radio>
-          <label className="man">남자</label>
-          <Radio name="" value=""></Radio>
-          <label>여자</label>
+        <div className="sex">
+          <h3>성별</h3>
+          <div className="radiogroup">
+            <Radio name="" value="" defaultChecked></Radio>
+            <label className="man">남자</label>
+            <Radio name="" value=""></Radio>
+            <label>여자</label>
+          </div>
         </div>
-      </div>
-      <div className="tall">
-        <h3>키</h3>
-        <Tall_select />
-      </div>
-      <div className="weight">
-        <h3>체중</h3>
-        <Weight_select />
-      </div>
-      <div className="create_btn">
-        <button id="create_btn" onClick={closeModal}>
-          아바타 생성하기
-        </button>
+        <div className="tall">
+          <h3>키</h3>
+          <Tall_select />
+        </div>
+        <div className="weight">
+          <h3>체중</h3>
+          <Weight_select />
+        </div>
+        <div className="create_btn">
+          <button id="create_btn" onClick={closeModal}>
+            아바타 생성하기
+          </button>
+        </div>
       </div>
     </Container>
   );
