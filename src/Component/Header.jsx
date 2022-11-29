@@ -40,6 +40,25 @@ const Container = styled.div`
     font-size: 18px;
     margin-left: 8px;
   }
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    & h1 {
+      font-size: 30px;
+      margin-left: 5%;
+    }
+    & > button {
+      width: 200px;
+      height: 50px;
+      margin-right: 5%;
+    }
+    & > button > a {
+      font-size: 20px;
+      line-height: 17.38px;
+    }
+    & > button > a > svg {
+      font-size: 20px;
+    }
+  }
 `;
 
 export default class Header extends React.Component {

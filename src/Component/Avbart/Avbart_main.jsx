@@ -24,8 +24,15 @@ const Container = styled.div`
     width: 100%;
     height: 500px;
     display: flex;
-
     margin-top: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    & .plus {
+      margin: 15.21px 22.38px 0 0;
+    }
+    & .help {
+      margin: 12.08px 12.08px 0 0;
+    }
   }
 `;
 

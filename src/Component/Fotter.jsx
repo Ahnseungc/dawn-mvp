@@ -62,6 +62,25 @@ const Container = styled.div`
     color: #505050;
     font-family: noto;
   }
+  @media screen and (max-width: 720px) {
+    & .fotter {
+      flex-direction: column;
+    }
+    & .info {
+      width: 100%;
+    }
+    & .right {
+      width: 100%;
+    }
+    & .right .peedback {
+      width: 100%;
+      padding: 0;
+      padding-top: 100px;
+      padding-right: 10%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 `;
 
 const Fotter = () => {

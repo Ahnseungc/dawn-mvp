@@ -9,6 +9,10 @@ const Container = styled.div`
     /* overflow: hidden; */
     margin-right: 30px;
   }
+  @media screen and (max-width: 720px) {
+    & {
+    }
+  }
 `;
 const slideList = [
   {
@@ -62,7 +66,6 @@ const slideList = [
 ];
 const Slide = ({ slide, onClickItem }) => {
   const SlideList = slideList.map((obj, index) => {
-    
     return (
       <li
         key={index}

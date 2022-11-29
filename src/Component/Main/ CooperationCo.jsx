@@ -13,23 +13,22 @@ const Container = styled.div`
     color: #000000;
   }
   & ul {
-    display: flex;
-    /* justify-content: center; */
-    justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   & ul li {
     display: flex;
     justify-content: center;
-    margin-right: 144px;
   }
+
   & ul li .detail {
     display: flex;
     flex-direction: column;
     margin-left: 18px;
   }
+
   & .hasTag {
     font-weight: 400;
     font-size: 12px;
@@ -40,6 +39,29 @@ const Container = styled.div`
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
+  }
+  @media screen and (max-width: 720px) {
+    & {
+      flex-direction: column;
+    }
+    & ul {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 100px;
+    }
+    & ul img {
+      margin-bottom: 30px;
+    }
+    & ul li:not(:nth-of-type(4n)) {
+      margin-right: 0;
+    }
+    & .hasTag {
+      font-size: 15px;
+    }
+    & .Enname {
+      font-size: 20px;
+    }
   }
 `;
 

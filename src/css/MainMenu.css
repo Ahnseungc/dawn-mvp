@@ -47,3 +47,8 @@
 .navigation-bar .menu-bar li:not(:last-of-type) {
     margin-right: 80px;
 }
+@media  screen and (max-width:720px) {
+    .navigation-bar .menu-bar li:not(:last-of-type) {
+        margin-right: 50px;
+    }    
+}
