@@ -12,30 +12,36 @@ const Container = styled.div`
     line-height: 43px;
     color: #000000;
   }
-  & ul {
+  & .ul {
+    justify-content: start;
+    width: 100%;
+  }
+  & .ul ul {
+    justify-content: start;
     width: 100%;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: start;
   }
-  & ul li {
+  & .ul ul li {
     display: flex;
     justify-content: center;
   }
 
-  & ul li .detail {
+  & .ul ul li .detail {
     display: flex;
     flex-direction: column;
     margin-left: 18px;
   }
 
-  & .hasTag {
+  & .ul .hasTag {
     font-weight: 400;
     font-size: 12px;
     line-height: 17px;
     color: #7a7a7a;
   }
-  & .Enname {
+  & .ul .Enname {
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
@@ -119,7 +125,9 @@ const CooperationCo = () => {
   return (
     <Container>
       <h1>협력 쇼핑몰</h1>
-      <ul>{CompanyList}</ul>
+      <div className="ul">
+        <ul>{CompanyList}</ul>
+      </div>
     </Container>
   );
 };
