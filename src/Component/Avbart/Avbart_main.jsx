@@ -20,6 +20,9 @@ const Container = styled.div`
     width: 100%;
     justify-content: flex-end;
   }
+  & Canvas {
+    padding-top: 50px;
+  }
   & .Avbart3D {
     width: 100%;
     height: 500px;
@@ -74,7 +77,7 @@ const Avbart_main = ({ item }) => {
               alt="/"
               onClick={qahandleClick}
             />
-            {qamodalopen && <Avbart_qa setqamodalOpen={qahandleClick} />}
+            {qamodalopen && <Avbart_qa setqamodalOpen={setqamodalOpen} />}
           </div>
         </div>
         <div className="Avbart3D">

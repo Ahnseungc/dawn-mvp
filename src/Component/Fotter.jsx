@@ -63,10 +63,17 @@ const Container = styled.div`
     font-family: noto;
   }
   @media screen and (max-width: 720px) {
+    & h1 {
+      font-size: 50px;
+      padding-left: 0;
+      text-align: center;
+    }
     & .fotter {
       flex-direction: column;
     }
     & .info {
+      padding: 50px 0 0 0;
+      text-align: center;
       width: 100%;
     }
     & .right {
@@ -75,7 +82,7 @@ const Container = styled.div`
     & .right .peedback {
       width: 100%;
       padding: 0;
-      padding-top: 100px;
+      padding-top: 50px;
       padding-right: 10%;
       display: flex;
       justify-content: center;

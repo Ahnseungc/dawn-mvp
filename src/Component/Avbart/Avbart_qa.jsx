@@ -30,7 +30,7 @@ const Container = styled.div`
     margin: 38.46px 0 0 110.46px;
   }
   & .qa_detail {
-    margin: 28px 20px 0 20px;
+    margin: 50px 20px 0 20px;
     display: flex;
     font-size: 15px;
     font-weight: 400;
@@ -81,7 +81,7 @@ const Container = styled.div`
     margin-bottom: 20px;
   }
   & .qa_detail .detail p:nth-child(6) {
-    margin-bottom: 49px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -92,56 +92,48 @@ const Avbart_qa = ({ setqamodalOpen }) => {
   };
   return (
     <Container>
-      <div onClick={(e) => e.stopPropagation()}>
-        <div className="qa_header">
-          <img src="/assets/Icon/palette.png" alt="/"></img>
-          <h1>사용설명서</h1>
-          <button id="modalCloseBtn_qa" onClick={closeModal_qa}>
-            <img src="/assets/Icon/close_icon.png" alt="/" />
-          </button>
-        </div>
+      <div className="qa_header">
+        <img src="/assets/Icon/palette.png" alt="/"></img>
+        <h1>사용설명서</h1>
+        <button id="modalCloseBtn_qa" onClick={closeModal_qa}>
+          <img src="/assets/Icon/close_icon.png" alt="/" />
+        </button>
+      </div>
 
-        <div className="qa_detail">
-          {/* <div className="number">
-            <p>1.</p>
-            <p>2.</p>
-            <p>3.</p>
-            <p>*</p>
-            <p>*</p>
-            <p>*</p>
-          </div> */}
-          <div className="detail">
-            <p>+ 버튼을 눌러 본인의 아바타를 생성합니다.</p>
+      <div className="qa_detail">
+        <div className="detail">
+          <p>
+            1. + <b>버튼</b>을 눌러 본인의 아바타를 생성합니다.
+          </p>
 
-            <p>
-              아래에 제공되는 옷들을 클릭해서 입어보며
-              <br />
-              코디를 확인합니다.
-            </p>
-            <p>
-              맘에 드는 옷이 있다면 해당 쇼핑몰에 들어가
-              <br />
-              구매할 수 있습니다.
-            </p>
-            <p>
-              이후 더 나은 서비스를 위해 우측 상단의
-              <br />
-              ‘설문조사 하러가기'를 눌러 피드백을 주신다면
-              <br />
-              감사드리겠습니다 !
-            </p>
-            <p>
-              palette의 서비스가 마음에 드셨다면
-              <br /> Instagram 팔로우를 누르고 소식을 받아보세요.
-              <br />
-              다양한 이벤트가 진행될 예정입니다 !
-            </p>
-            <p>
-              문의는 palette 인스타그램의 DM 또는
-              <br />
-              palette@naver.com으로 보내주세요 !
-            </p>
-          </div>
+          <p>
+            2. 아래에 제공되는 옷들을 클릭해서 입어보며
+            <br />
+            <b>코디를 확인</b>합니다.
+          </p>
+          <p>
+            3. 맘에 드는 옷이 있다면 해당 쇼핑몰에 들어가
+            <br />
+            구매할 수 있습니다.
+          </p>
+          <p>
+            * 이후 더 나은 서비스를 위해 우측 상단의
+            <br />
+            <b>‘설문조사 하러가기'</b>를 눌러 피드백을 주신다면
+            <br />
+            감사드리겠습니다 !
+          </p>
+          <p>
+            * palette의 서비스가 마음에 드셨다면
+            <br /> <b>Instagram 팔로우</b>를 누르고 소식을 받아보세요.
+            <br />
+            다양한 이벤트가 진행될 예정입니다 !
+          </p>
+          <p>
+            * 문의는 palette 인스타그램의 DM 또는
+            <br />
+            palette@naver.com으로 보내주세요 !
+          </p>
         </div>
       </div>
     </Container>
