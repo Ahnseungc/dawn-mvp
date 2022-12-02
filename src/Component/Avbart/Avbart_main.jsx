@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import Avbart_main_css from "../../css/Avbart_main.css";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, context } from "@react-three/fiber";
 import AvbartMesh from "./Avbart_Mesh";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -20,21 +20,41 @@ const Container = styled.div`
     width: 100%;
     justify-content: flex-end;
   }
-  & Canvas {
-    padding-top: 50px;
+  & .avbart_main {
+    width: 100%;
+    height: 500px;
   }
+
   & .Avbart3D {
     width: 100%;
     height: 500px;
     display: flex;
     margin-top: 50px;
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 390px) {
     & .plus {
-      margin: 15.21px 22.38px 0 0;
+      margin: 0;
+    }
+    & .plus img {
+      margin: 15.21px 22.29px 0 0;
+      width: 19.58px;
+      height: 19.58px;
     }
     & .help {
+      margin: 0;
+    }
+    & .help img {
       margin: 12.08px 12.08px 0 0;
+      width: 25.58px;
+      height: 25.58px;
+    }
+    & .avbart_main {
+      width: 100%;
+      height: 260px;
+    }
+    & .Avbart3D {
+      width: 260px;
+      margin-top: 10px;
     }
   }
 `;
@@ -59,6 +79,7 @@ const Avbart_main = ({ item }) => {
   const qahandleClick = () => {
     setqamodalOpen(true);
   };
+
   return (
     <Container>
       <div className="avbart_main">
@@ -82,15 +103,15 @@ const Avbart_main = ({ item }) => {
         </div>
         <div className="Avbart3D">
           <Canvas
-            orthographic
             camera={{
               left: -1,
               right: 1,
               top: 1,
               bottom: -1,
               near: 0.1,
-              far: 1000,
+              far: 100,
               zoom: 18,
+              aspect: window.innerWidth / window.innerHeight,
             }}
           >
             <ambientLight />

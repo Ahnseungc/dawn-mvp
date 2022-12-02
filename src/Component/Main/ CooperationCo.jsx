@@ -46,27 +46,44 @@ const Container = styled.div`
     font-size: 16px;
     line-height: 23px;
   }
-  @media screen and (max-width: 720px) {
-    & {
-      flex-direction: column;
+  @media screen and (max-width: 390px) {
+    & h1 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 23px;
+      margin: 33px 0 0 15px;
     }
-    & ul {
-      margin-top: 30px;
-      display: grid;
+    & .ul ul {
       grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 100px;
+      margin-top: 10px;
     }
-    & ul img {
-      margin-bottom: 30px;
+    & .ul ul li {
+      margin-left: 15px;
     }
-    & ul li:not(:nth-of-type(4n)) {
-      margin-right: 0;
+
+    & .ul ul li .detail {
+      display: flex;
+      flex-direction: column;
+      margin-left: 9px;
     }
-    & .hasTag {
-      font-size: 15px;
+
+    & .ul .hasTag {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 17px;
+      color: #7a7a7a;
     }
-    & .Enname {
-      font-size: 20px;
+    & .ul .Enname {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 23px;
+    }
+    & .ul .name {
+      font-size: 13px;
+    }
+    & .ul img {
+      width: 50px;
+      height: 50px;
     }
   }
 `;

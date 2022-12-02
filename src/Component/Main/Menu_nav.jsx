@@ -31,11 +31,14 @@ const StyledLink = styled(Link)`
     left: 50%;
     transform: translateX(-50%);
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 390px) {
     & {
-      font-size: 25px;
+      font-size: 14px;
       line-height: 20px;
       width: 100%;
+    }
+    & .menu-bar {
+      width: 400px;
     }
   }
 `;

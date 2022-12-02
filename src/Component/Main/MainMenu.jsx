@@ -28,6 +28,22 @@ const Container = styled.div`
   & .nextBtn {
     margin-right: 33.75px;
   }
+  @media screen and (max-width: 390px) {
+    & .prevBtn img {
+      width: 4.5px;
+      height: 9px;
+    }
+    & .prevBtn {
+      margin-left: 8.75px;
+    }
+    & .nextBtn img {
+      width: 4.5px;
+      height: 9px;
+    }
+    & .nextBtn {
+      margin-right: 8.75px;
+    }
+  }
 `;
 
 const MainMenu = () => {

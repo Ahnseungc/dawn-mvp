@@ -10,7 +10,18 @@ const Container = styled.div`
     margin-right: 30px;
   }
   @media screen and (max-width: 720px) {
-    & {
+    & li img {
+      width: 100px;
+      height: 100px;
+    }
+    & li:not(:last-of-type) {
+      margin-right: 7px;
+    }
+    & li .products_header {
+      font-size: 13px;
+    }
+    & li .products_detail {
+      font-size: 11px;
     }
   }
 `;

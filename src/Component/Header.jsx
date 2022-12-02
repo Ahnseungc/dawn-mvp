@@ -40,23 +40,23 @@ const Container = styled.div`
     font-size: 18px;
     margin-left: 8px;
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 390px) {
     width: 100%;
     & h1 {
-      font-size: 30px;
+      font-size: 25px;
       margin-left: 5%;
     }
     & > button {
-      width: 200px;
-      height: 50px;
+      width: 130px;
+      height: 30px;
       margin-right: 5%;
     }
     & > button > a {
-      font-size: 20px;
-      line-height: 17.38px;
+      font-size: 12px;
+      line-height: 17px;
     }
     & > button > a > svg {
-      font-size: 20px;
+      font-size: 12px;
     }
   }
 `;

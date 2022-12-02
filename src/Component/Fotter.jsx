@@ -62,30 +62,49 @@ const Container = styled.div`
     color: #505050;
     font-family: noto;
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 390px) {
+    & {
+      margin-top: 50px;
+    }
     & h1 {
-      font-size: 50px;
+      font-size: 30px;
       padding-left: 0;
       text-align: center;
     }
     & .fotter {
       flex-direction: column;
+      width: 100%;
+      /* margin-top: 20px; */
     }
     & .info {
+      line-height: 14px;
+      font-size: 10px;
       padding: 50px 0 0 0;
       text-align: center;
       width: 100%;
     }
     & .right {
       width: 100%;
+      margin: 0;
     }
     & .right .peedback {
+      line-height: 17px;
+      font-size: 12px;
+      font-weight: 700;
       width: 100%;
       padding: 0;
-      padding-top: 50px;
-      padding-right: 10%;
+      padding-top: 20px;
       display: flex;
       justify-content: center;
+    }
+    & .SNS div p {
+      opacity: 0;
+    }
+    & .right .SNS {
+      padding: 20px 0 36px 74px;
+    }
+    & .right .SNS div:not(:last-of-type) {
+      padding: 0;
     }
   }
 `;
@@ -114,6 +133,7 @@ const Fotter = () => {
           참고해주시기 바랍니다.
         </div>
         <div className="right">
+          <div className="peedback">문의 및 피드백 : palette@naver.com</div>
           <div className="SNS">
             <div>
               <img src="/assets/Icon/facebook.png"></img>
@@ -129,7 +149,6 @@ const Fotter = () => {
               <p>유튜브</p>
             </div>
           </div>
-          <div className="peedback">문의 및 피드백 : palette@naver.com</div>
         </div>
       </div>
     </Container>
