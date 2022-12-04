@@ -43,6 +43,10 @@ const Container = styled.div`
     & .nextBtn {
       margin-right: 8.75px;
     }
+    & ul {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 `;
 

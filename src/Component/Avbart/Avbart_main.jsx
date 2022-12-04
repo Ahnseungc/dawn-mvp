@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import Avbart_main_css from "../../css/Avbart_main.css";
-import { Canvas, context } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import AvbartMesh from "./Avbart_Mesh";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Avbart_plus from "./Avbart_plue/Avbart_plus";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Avbart_qa from "./Avbart_qa";
 
 const Container = styled.div`
@@ -27,8 +27,11 @@ const Container = styled.div`
 
   & .Avbart3D {
     width: 100%;
-    height: 500px;
+    height: 423px;
     display: flex;
+    /* padding-top: 100px; */
+  }
+  & .Avbart3D Canvas {
     margin-top: 50px;
   }
   @media screen and (max-width: 390px) {
@@ -53,8 +56,12 @@ const Container = styled.div`
       height: 260px;
     }
     & .Avbart3D {
-      width: 260px;
-      margin-top: 10px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+    }
+    & .Avbart3D Canvas {
+      margin-top: 50px;
     }
   }
 `;
@@ -102,22 +109,13 @@ const Avbart_main = ({ item }) => {
           </div>
         </div>
         <div className="Avbart3D">
-          <Canvas
-            camera={{
-              left: -1,
-              right: 1,
-              top: 1,
-              bottom: -1,
-              near: 0.1,
-              far: 100,
-              zoom: 18,
-              aspect: window.innerWidth / window.innerHeight,
-            }}
-          >
+          <Canvas>
             <ambientLight />
             <directionalLight />
+            <PerspectiveCamera makeDefault={true} position={[0, 0, 50]} />
+            <OrbitControls makeDefault={true} enableZoom={false} />
             <Suspense fallback={null}>
-              <AvbartMesh position={[10, 0, -10]} />
+              <AvbartMesh position={[0, -30, -10]} />
             </Suspense>
             <OrbitControls target={[0, -1, 0]} enableDamping={true} />
           </Canvas>
