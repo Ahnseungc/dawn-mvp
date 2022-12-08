@@ -81,10 +81,11 @@ const Avbart_main = ({ item }) => {
 
   const handleClick = () => {
     setModalOpen(true);
-    // console.log("popup", modalopen);
+    console.log("popup", modalopen);
   };
   const qahandleClick = () => {
     setqamodalOpen(true);
+    console.log("popup", qamodalopen);
   };
 
   return (
