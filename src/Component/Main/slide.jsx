@@ -1,5 +1,8 @@
 import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
+import axios from "axios";
+import { useState } from "react";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -75,7 +78,54 @@ const slideList = [
     detail: "흰색 레터링...",
   },
 ];
+
 const Slide = ({ slide, onClickItem }) => {
+  // const [datas, setDatas] = useState(null);
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(null);
+
+  // const fetchdata = async () => {
+  //   try {
+  //     setError(null);
+  //     setDatas(null);
+  //     setLoading(true);
+  //     const response = await axios.get("http://35.79.227.78:8080/product/all");
+  //     console.log("response", response);
+  //     setDatas(response);
+  //   } catch (e) {
+  //     setError(e);
+  //   }
+  //   setLoading(false);
+  // };
+
+  // useEffect(() => {
+  //   fetchdata();
+  // }, []);
+
+  //통신 마지막 제발...
+
+  // const [datas, setDatas] = useState([]);
+
+  // const searchApi = () => {
+  //   const url = "http://35.79.227.78:8080/product/all";
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       setDatas(res);
+  //       console.log("success");
+  //     })
+  //     .catch((err) => {
+  //       console.log("fail", err);
+  //     });
+  // };
+  // useEffect(() => {
+  //   searchApi();
+  // }, []);
+
+  // if (datas.length > 0) {
+  //   return console.log("success_data");
+  // }
+
   const SlideList = slideList.map((obj, index) => {
     return (
       <li

@@ -32,7 +32,7 @@ const Container = styled.div`
     /* padding-top: 100px; */
   }
   & .Avbart3D Canvas {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   @media screen and (max-width: 390px) {
     & .plus {
