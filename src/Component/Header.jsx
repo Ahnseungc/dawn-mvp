@@ -6,12 +6,12 @@ import styled from "styled-components";
 import header_css from "../css/Header.css";
 
 const Container = styled.div`
-  width: 100%;
+  /* width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 80px; */
   & > h1 {
     font-family: "NotingYou";
     font-style: normal;
