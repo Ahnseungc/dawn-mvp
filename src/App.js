@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import Header from "./Component/Header";
 import MainMenu from "./Component/Main/MainMenu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -8,22 +8,19 @@ import Fotter from "./Component/Fotter";
 import { createStore } from "redux";
 import { Provider, useSelector, useDispatch, connect } from "react-redux";
 import { fromHalfFloat } from "three";
+import Loading from "./Component/Loading";
+import axios from "axios";
 const Main = styled.main`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 `;
 
-const popup = (currentState, action) => {
-  if (currentState === undefined) {
-  }
-  const newState = { ...currentState };
-  return newState;
-};
-
 function App() {
+  // const [loading, setLoading] = useState(true);
   return (
     <>
+      {/* <Loading /> */}
       <Header />
       <Main>
         <MainMenu />
