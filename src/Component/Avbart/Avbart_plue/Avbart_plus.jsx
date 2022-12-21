@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import RadioGroup from "./Avbart_plus_sex/Avbart_plus_sex_radiogroup";
 import Radio from "./Avbart_plus_sex/Avbart_plus_sex_radio";
 import Weight_select from "./Avbart_plus_sex/Avbart_weight";
 import Tall_select from "./Avbart_plus_sex/Avbart_plus_tall_select";
@@ -46,29 +45,13 @@ const Container = styled.div`
     margin-left: 25px;
     margin-bottom: 15px;
   }
-  & .sex .radiogroup {
-    margin-bottom: 25px;
-    margin-left: 25px;
-  }
-  & .sex .radiogroup label {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  & .sex .radiogroup .man {
-    margin-right: 69px;
-  }
-
   & .tall {
     margin-bottom: 25px;
   }
   & .weight {
     margin-bottom: 60px;
   }
-  & button {
+  & .create_btn button {
     background: #8e71d5;
     border-radius: 3px;
     width: 300px;
@@ -81,7 +64,6 @@ const Container = styled.div`
   & .create_btn {
     display: flex;
     justify-content: center;
-    /* background-color: #8b89893c; */
   }
 `;
 
@@ -106,12 +88,14 @@ const Avbart_plus = ({ setModalOpen }) => {
         </div>
         <div className="sex">
           <h3>성별</h3>
-          <div className="radiogroup">
-            <Radio name="" value="" defaultChecked></Radio>
+          <Radio />
+
+          {/* <div className="radiogroup">
+            <Radio name="man" value="1" defaultChecked></Radio>
             <label className="man">남자</label>
-            <Radio name="" value=""></Radio>
-            <label>여자</label>
-          </div>
+            <Radio name="woman" value="2"></Radio>
+            <label className="man">여자</label>
+          </div> */}
         </div>
         <div className="tall">
           <h3>키</h3>

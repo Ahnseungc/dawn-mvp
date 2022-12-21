@@ -38,33 +38,6 @@ const Container = styled.div`
     text-align: left;
   }
 
-  /* & .qa_detail .number {
-    height: 100%;
-    align-items: center;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
-  }
-  & .qa_detail .number p:nth-child(1) {
-    margin-bottom: 20px;
-  }
-  & .qa_detail .number p:nth-child(2) {
-    margin-bottom: 34px;
-  }
-  & .qa_detail .number p:nth-child(3) {
-    margin-bottom: 46px;
-  }
-  & .qa_detail .number p:nth-child(4) {
-    margin-bottom: 20px;
-  }
-  & .qa_detail .number p:nth-child(5) {
-    margin-bottom: 20px;
-  }
-  & .qa_detail .number p:nth-child(6) {
-    margin-bottom: 49px;
-  } */
-
   & .qa_detail .detail p:nth-child(1) {
     margin-bottom: 20px;
   }

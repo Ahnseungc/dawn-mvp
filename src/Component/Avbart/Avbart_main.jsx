@@ -114,18 +114,15 @@ const Avbart_main = ({ item }) => {
             <ambientLight />
             <directionalLight />
             <PerspectiveCamera makeDefault={true} position={[0, 0, 50]} />
-            <OrbitControls makeDefault={true} enableZoom={false} />
+
             <Suspense fallback={null}>
               <AvbartMesh position={[0, -30, -10]} />
             </Suspense>
-            <OrbitControls target={[0, -1, 0]} enableDamping={true} />
           </Canvas>
         </div>
       </div>
     </Container>
   );
-
-  // return <div className="avbart_main">avbart</div>;
 };
 
 export default Avbart_main;
